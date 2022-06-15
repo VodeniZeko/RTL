@@ -15,7 +15,7 @@ jobs:
             - name: Python Command
               run:  |
                 import platform
-                print(platform.proccesor())
+                print(platform.machine())
               shell: python
     run-window-commands:         
         runs-on: windows-latest
