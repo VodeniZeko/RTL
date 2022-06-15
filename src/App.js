@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 
+export function replaceCamelCaseWithSpaces(colorName) {
+  return colorName.replace(/\B([A-Z])\B/g, " $1");
+}
+
 function App() {
   const [init, setInit] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -20,7 +24,10 @@ function App() {
       >
         {buttonText}
       </button>
-      <input onClick={disableButton} type="checkbox" />
+      <label>
+        Disable Button
+        <input onClick={disableButton} type="checkbox" />
+      </label>
     </div>
   );
 }
