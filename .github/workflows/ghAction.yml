@@ -1,0 +1,15 @@
+name: randome github action
+
+on: [push]
+
+jobs:
+    run-random-github-action:
+        runs-on: ubuntu-latest
+        steps:
+            - name: javascript hello action
+              id: greet
+              uses: actions/hello-world-javascript-actions/v1.1
+              with:
+                  who-to-greet: Edvin
+            - name: Log greet time
+              run: echo "${{steps.greet.outputs.time}}"
