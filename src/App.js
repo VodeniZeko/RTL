@@ -12,8 +12,10 @@ function App() {
   const changeColor = () => setInit(!init);
   const disableButton = () => setIsDisabled(!isDisabled);
 
-  const buttonBackground = !init ? "red" : "blue";
-  const buttonText = !init ? "Change to Blue" : "Change to Red";
+  const buttonBackground = !init ? "MediumVioletRed" : "MidnightBlue";
+  const buttonText = init
+    ? replaceCamelCaseWithSpaces("MediumVioletRed")
+    : replaceCamelCaseWithSpaces("MidnightBlue");
 
   return (
     <div className="App">
@@ -22,7 +24,7 @@ function App() {
         onClick={changeColor}
         disabled={isDisabled}
       >
-        {buttonText}
+        {`Change to ${buttonText}`}
       </button>
       <label>
         Disable Button

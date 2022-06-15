@@ -5,27 +5,31 @@ import { replaceCamelCaseWithSpaces } from "./App";
 test("button has correct initial setup and changes color on click", () => {
   render(<App />);
 
-  //find an element "by role as recommnded" with a role button and and text "change to blue"
-  const testedButton = screen.getByRole("button", { name: "Change to Blue" });
+  //find an element "by role as recommnded" with a role button and and text "change to Midnight Blue"
+  const testedButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
 
-  //expect a background color to be 'red'
-  expect(testedButton).toHaveStyle({ backgroundColor: "red" });
+  //expect a background color to be 'Medium Violet Red'
+  expect(testedButton).toHaveStyle({ backgroundColor: "MediumVioletRed" });
 
   //click the button
   fireEvent.click(testedButton);
 
-  //expect the button background to be blue
-  expect(testedButton).toHaveStyle({ backgroundColor: "blue" });
+  //expect the button background to be Midnight Blue
+  expect(testedButton).toHaveStyle({ backgroundColor: "MidnightBlue" });
 
-  //expect button text to change
-  expect(testedButton.textContent).toBe("Change to Red");
+  //expect button text to say "change to Medium Violet Red"
+  expect(testedButton.textContent).toBe("Change to Medium Violet Red");
 });
 
 test("initially button is enabled and when checkmark is checked it will become disabled", () => {
   render(<App />);
 
   // get the button and verify that button is enabled
-  const testedButton = screen.getByRole("button", { name: "Change to Blue" });
+  const testedButton = screen.getByRole("button", {
+    name: "Change to Midnight Blue",
+  });
   expect(testedButton).toBeEnabled();
 
   // get the checkbox and verify that checkbox is un-checked
