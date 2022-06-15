@@ -1,4 +1,4 @@
-name: randome github action
+name: Github Action
 
 on: [push]
 
