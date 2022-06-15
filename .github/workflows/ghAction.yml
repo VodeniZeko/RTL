@@ -8,7 +8,7 @@ jobs:
         steps:
             - name: javascript hello action
               id: greet
-              uses: actions/hello-world-javascript-actions/v1.1
+              uses: actions/hello-world-javascript-action/v1.1
               with:
                   who-to-greet: Edvin
             - name: Log greet time
