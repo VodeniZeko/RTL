@@ -14,7 +14,7 @@ jobs:
                 npm -v
             - name: Python Command
               run:  |
-                import platfrom
+                import platform
                 print(platform.proccesor())
               shell: python
     run-window-commands:         
