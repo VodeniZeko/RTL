@@ -1,6 +1,6 @@
 name: Github Action
 
-on: [push]
+on: push
 
 jobs:
     run-random-github-action:
